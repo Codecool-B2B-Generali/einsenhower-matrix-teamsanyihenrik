@@ -52,6 +52,7 @@ namespace Codecool.EinsenhowerMatrix
         /// </summary>
         public void Mark()
         {
+            IsDone = true;
         }
 
         /// <summary>
@@ -59,6 +60,7 @@ namespace Codecool.EinsenhowerMatrix
         /// </summary>
         public void UnMark()
         {
+            IsDone = false;
         }
 
         /// <summary>
@@ -67,7 +69,7 @@ namespace Codecool.EinsenhowerMatrix
         /// <returns>string containing instance values</returns>
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return "Title:" + Title + "Deadline:" + Deadline.ToString();
         }
     }
 }
