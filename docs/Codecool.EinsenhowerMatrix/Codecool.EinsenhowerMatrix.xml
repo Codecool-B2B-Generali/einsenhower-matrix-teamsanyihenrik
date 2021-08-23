@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Codecool.EinsenhowerMatrix</name>
+    </assembly>
+    <members>
+        <member name="T:Codecool.EinsenhowerMatrix.EisenhowerMain">
+            <summary>
+            Main class for program
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.EisenhowerMain.Run">
+            <summary>
+            Runs program with basic user UI
+            </summary>
+        </member>
+        <member name="T:Codecool.EinsenhowerMatrix.Program">
+            <summary>
+            Entry point for app
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.Program.Main(System.String[])">
+            <summary>
+            Entry method for app
+            </summary>
+            <param name="args">command line args</param>
+        </member>
+        <member name="T:Codecool.EinsenhowerMatrix.TodoItem">
+            <summary>
+            Base class that represents task
+            </summary>
+        </member>
+        <member name="P:Codecool.EinsenhowerMatrix.TodoItem.Title">
+            <summary>
+            Gets or sets Task's title
+            </summary>
+        </member>
+        <member name="P:Codecool.EinsenhowerMatrix.TodoItem.Deadline">
+            <summary>
+            Gets or sets Task's deadline
+            </summary>
+        </member>
+        <member name="P:Codecool.EinsenhowerMatrix.TodoItem.IsDone">
+            <summary>
+            Gets or sets a value indicating whether task is complete or not
+            </summary>
+        </member>
+        <member name="P:Codecool.EinsenhowerMatrix.TodoItem.IsImportant">
+            <summary>
+            Gets or sets a value indicating whether task is important or not
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoItem.#ctor(System.String,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Codecool.EinsenhowerMatrix.TodoItem"/> class.
+            </summary>
+            <param name="title">string representation for title</param>
+            <param name="deadline">deadline for title</param>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoItem.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Codecool.EinsenhowerMatrix.TodoItem"/> class.
+            </summary>
+            <param name="title">string representation for title</param>
+            <param name="deadline">deadline for title</param>
+            <param name="isImportant">value indicating whether task is important or not</param>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoItem.Mark">
+            <summary>
+            Marks item as done
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoItem.UnMark">
+            <summary>
+            Marks item as undone
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoItem.ToString">
+            <summary>
+            Returns a human readable representation for task
+            </summary>
+            <returns>string containing instance values</returns>
+        </member>
+        <member name="T:Codecool.EinsenhowerMatrix.TodoMatrix">
+            <summary>
+            Top level class for Matrix
+            </summary>
+        </member>
+        <member name="P:Codecool.EinsenhowerMatrix.TodoMatrix.Quarters">
+            <summary>
+            Gets or sets dictionary with quarters
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Codecool.EinsenhowerMatrix.TodoMatrix"/> class.
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.AddItem(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Creates new item based on given parameters
+            </summary>
+            <param name="title">title for new task</param>
+            <param name="date">deadline for new task</param>
+            <param name="isImportant">boolean value that indicates whenever task is important or not</param>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.ArchiveItems">
+            <summary>
+            Deletes all items that are marked as done
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.AddItemsFromFile(System.String)">
+            <summary>
+            Reads the content from given file, creates and add item to given quarter
+            </summary>
+            <param name="filePath">string with path leading to source file</param>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.SaveItemsToFile(System.String)">
+            <summary>
+            Saves current matrix content to file
+            </summary>
+            <param name="filePath">file path under all task will be saved</param>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.ToString">
+            <summary>
+            Returns human readable representation for matrix
+            </summary>
+            <returns>string with all quarters and associated items</returns>
+        </member>
+        <member name="T:Codecool.EinsenhowerMatrix.TodoQuarter">
+            <summary>
+            Class that represents quarter for items from different categories
+            </summary>
+        </member>
+        <member name="F:Codecool.EinsenhowerMatrix.TodoQuarter.Items">
+            <summary>
+            Gets or sets list of items
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoQuarter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Codecool.EinsenhowerMatrix.TodoQuarter"/> class.
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoQuarter.AddItem(System.String,System.DateTime)">
+            <summary>
+            Add item to list
+            </summary>
+            <param name="title">title of item</param>
+            <param name="deadline">deadline of item</param>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoQuarter.AddItem(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Add item to list
+            </summary>
+            <param name="title">title of item</param>
+            <param name="deadline">deadline of item</param>
+            <param name="isImportant">boolean that indicates whenever item is important or not</param>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoQuarter.RemoveItem(System.Int32)">
+            <summary>
+            Removes item instance under given index
+            </summary>
+            <param name="index">index of </param>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoQuarter.ArchiveItems">
+            <summary>
+            Destroys all done item
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoQuarter.ToString">
+            <summary>
+            Returns human readable representation of quarter
+            </summary>
+            <returns>string with all nested items</returns>
+        </member>
+    </members>
+</doc>
