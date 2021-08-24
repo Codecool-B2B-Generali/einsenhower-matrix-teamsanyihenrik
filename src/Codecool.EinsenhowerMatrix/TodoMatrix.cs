@@ -31,14 +31,13 @@ namespace Codecool.EinsenhowerMatrix
             string filepath = "c:\\todoitems\\items.csv";
             string input;
             Console.WriteLine("0 = quit");
-            Console.WriteLine("1 = new task");
-            Console.WriteLine("2 = archive");
-            Console.WriteLine("3 = load");
-            Console.WriteLine("4 = save");
-            Console.WriteLine("5 = show all");
-            Console.WriteLine("6 = finish task");
-            Console.WriteLine("7 = show 1 quarter");
-
+            Console.WriteLine("1 = enter new task");
+            Console.WriteLine("2 = delete all finished tasks");
+            Console.WriteLine("3 = load tasks from file");
+            Console.WriteLine("4 = save tasks to file");
+            Console.WriteLine("5 = show all tasks");
+            Console.WriteLine("6 = finish a task");
+            Console.WriteLine("7 = show selected quarter's tasks");
             input = Console.ReadLine();
             switch (input)
             {
@@ -107,8 +106,34 @@ namespace Codecool.EinsenhowerMatrix
 
                 case "7":
                     Console.WriteLine("Selected quarter?");
-                    input = Console.ReadLine();
-                    ShowSelected(input);
+                    Console.WriteLine("1 = Urgent & Important");
+                    Console.WriteLine("2 = Urgent & Not important");
+                    Console.WriteLine("3 = Not urgent & Important");
+                    Console.WriteLine("4 = Not urgent & Not important");
+                    string input2 = Console.ReadLine();
+                    while ((input2 != "1") && (input2 != "2") && (input2 != "3") && (input2 != "4"))
+                    {
+                        Console.WriteLine("Invalid answer, please retry");
+                        input2 = Console.ReadLine();
+                    }
+
+                    switch (input2)
+                    {
+                        case "1":
+                            input2 = "Urgent & Important";
+                            break;
+                        case "2":
+                            input2 = "Urgent & Not important";
+                            break;
+                        case "3":
+                            input2 = "Not urgent & Important";
+                            break;
+                        case "5":
+                            input2 = "Not urgent & Not important";
+                            break;
+                    }
+
+                    ShowSelected(input2);
                     return false;
                     break;
             }

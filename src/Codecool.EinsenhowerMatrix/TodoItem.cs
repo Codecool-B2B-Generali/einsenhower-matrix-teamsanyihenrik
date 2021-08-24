@@ -73,8 +73,8 @@ namespace Codecool.EinsenhowerMatrix
         /// <returns>string containing instance values</returns>
         public override string ToString()
         {
-            return "\n  Title:" + Title.ToString() +
-                   ", Deadline:" + Deadline.ToString() +
+            return "\n  Title: " + Title.ToString() +
+                   ", Deadline: " + Deadline.ToString("d") +
                    ", IsImportant: " + IsImportant.ToString() +
                    ", IsDone: " + IsDone.ToString();
         }
