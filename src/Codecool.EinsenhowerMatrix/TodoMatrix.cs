@@ -35,8 +35,9 @@ namespace Codecool.EinsenhowerMatrix
             Console.WriteLine("2 = archive");
             Console.WriteLine("3 = load");
             Console.WriteLine("4 = save");
-            Console.WriteLine("5 = show");
+            Console.WriteLine("5 = show all");
             Console.WriteLine("6 = finish task");
+            Console.WriteLine("7 = show 1 quarter");
 
             input = Console.ReadLine();
             switch (input)
@@ -103,9 +104,30 @@ namespace Codecool.EinsenhowerMatrix
                     FinishItem(input);
                     return false;
                     break;
+
+                case "7":
+                    Console.WriteLine("Selected quarter?");
+                    input = Console.ReadLine();
+                    ShowSelected(input);
+                    return false;
+                    break;
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// showsel
+        /// </summary>
+        public void ShowSelected(string input)
+        {
+            foreach (KeyValuePair<string, TodoQuarter> kvp in Dict)
+            {
+                if (kvp.Key.Equals(input))
+                {
+                    Console.WriteLine(kvp.Value.ToString());
+                }
+            }
         }
 
         /// <summary>

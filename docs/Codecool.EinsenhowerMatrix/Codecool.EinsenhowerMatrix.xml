@@ -94,6 +94,11 @@
             user input
             </summary>
         </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.ShowSelected(System.String)">
+            <summary>
+            showsel
+            </summary>
+        </member>
         <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.FinishItem(System.String)">
             <summary>
             finish item
