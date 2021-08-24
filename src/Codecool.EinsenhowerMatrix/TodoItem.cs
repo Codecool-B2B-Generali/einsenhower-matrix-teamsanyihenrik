@@ -32,9 +32,11 @@ namespace Codecool.EinsenhowerMatrix
         /// </summary>
         /// <param name="title">string representation for title</param>
         /// <param name="deadline">deadline for title</param>
-        public TodoItem(string title, DateTime deadline)
-        {
-        }
+        //public TodoItem(string title, DateTime deadline)
+        //{
+        //    Title = title;
+        //    Deadline = deadline;
+        //}
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TodoItem"/> class.
@@ -43,8 +45,10 @@ namespace Codecool.EinsenhowerMatrix
         /// <param name="deadline">deadline for title</param>
         /// <param name="isImportant">value indicating whether task is important or not</param>
         public TodoItem(string title, DateTime deadline, bool isImportant)
-            : this(title, deadline)
         {
+            Title = title;
+            Deadline = deadline;
+            IsImportant = isImportant;
         }
 
         /// <summary>
@@ -69,7 +73,10 @@ namespace Codecool.EinsenhowerMatrix
         /// <returns>string containing instance values</returns>
         public override string ToString()
         {
-            return "Title:" + Title + "Deadline:" + Deadline.ToString();
+            return "\n  Title:" + Title.ToString() +
+                   ", Deadline:" + Deadline.ToString() +
+                   ", IsImportant: " + IsImportant.ToString() +
+                   ", IsDone: " + IsDone.ToString();
         }
     }
 }

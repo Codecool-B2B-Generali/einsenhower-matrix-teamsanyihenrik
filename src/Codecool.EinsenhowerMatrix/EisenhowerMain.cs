@@ -12,6 +12,13 @@ namespace Codecool.EinsenhowerMatrix
         /// </summary>
         public void Run()
         {
+            bool exit;
+            TodoMatrix matrix = new TodoMatrix();
+            do
+            {
+                exit = matrix.Inputdata();
+            }
+            while (exit != true);
         }
     }
 }

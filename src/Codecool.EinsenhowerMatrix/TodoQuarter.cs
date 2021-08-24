@@ -12,7 +12,7 @@ namespace Codecool.EinsenhowerMatrix
         /// <summary>
         /// Gets or sets list of items
         /// </summary>
-        public List<TodoItem> Items;
+        public List<TodoItem> Items = new List<TodoItem>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TodoQuarter"/> class.
@@ -26,20 +26,10 @@ namespace Codecool.EinsenhowerMatrix
         /// </summary>
         /// <param name="title">title of item</param>
         /// <param name="deadline">deadline of item</param>
-        public void AddItem(string title, DateTime deadline)
-        {
-            .Items.Add(new TodoItem(title, deadline));
-        }
-
-        /// <summary>
-        /// Add item to list
-        /// </summary>
-        /// <param name="title">title of item</param>
-        /// <param name="deadline">deadline of item</param>
         /// <param name="isImportant">boolean that indicates whenever item is important or not</param>
         public void AddItem(string title, DateTime deadline, bool isImportant)
         {
-            Items.Add(new TodoItem(title, deadline,isImportant));
+            Items.Add(new TodoItem(title, deadline, isImportant));
         }
 
         /// <summary>
@@ -64,10 +54,14 @@ namespace Codecool.EinsenhowerMatrix
         /// <returns>string with all nested items</returns>
         public override string ToString()
         {
-            ForEach(TodoItem) 
-            { 
-                this.ToString(); 
+            StringBuilder str = new StringBuilder();
+            for (int i = 0; i < Items.Count; i++)
+            {
+                str.Append(Items[i].ToString());
+                str.Append(Environment.NewLine);
             }
+
+            return str.ToString();
         }
 
         private void SortToDoItems()

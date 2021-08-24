@@ -50,13 +50,6 @@
             Gets or sets a value indicating whether task is important or not
             </summary>
         </member>
-        <member name="M:Codecool.EinsenhowerMatrix.TodoItem.#ctor(System.String,System.DateTime)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Codecool.EinsenhowerMatrix.TodoItem"/> class.
-            </summary>
-            <param name="title">string representation for title</param>
-            <param name="deadline">deadline for title</param>
-        </member>
         <member name="M:Codecool.EinsenhowerMatrix.TodoItem.#ctor(System.String,System.DateTime,System.Boolean)">
             <summary>
             Initializes a new instance of the <see cref="T:Codecool.EinsenhowerMatrix.TodoItem"/> class.
@@ -86,7 +79,7 @@
             Top level class for Matrix
             </summary>
         </member>
-        <member name="P:Codecool.EinsenhowerMatrix.TodoMatrix.Quarters">
+        <member name="F:Codecool.EinsenhowerMatrix.TodoMatrix.Dict">
             <summary>
             Gets or sets dictionary with quarters
             </summary>
@@ -95,6 +88,17 @@
             <summary>
             Initializes a new instance of the <see cref="T:Codecool.EinsenhowerMatrix.TodoMatrix"/> class.
             </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.Inputdata">
+            <summary>
+            user input
+            </summary>
+        </member>
+        <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.FinishItem(System.String)">
+            <summary>
+            finish item
+            </summary>
+            <param name="title">title</param>
         </member>
         <member name="M:Codecool.EinsenhowerMatrix.TodoMatrix.AddItem(System.String,System.DateTime,System.Boolean)">
             <summary>
@@ -141,13 +145,6 @@
             <summary>
             Initializes a new instance of the <see cref="T:Codecool.EinsenhowerMatrix.TodoQuarter"/> class.
             </summary>
-        </member>
-        <member name="M:Codecool.EinsenhowerMatrix.TodoQuarter.AddItem(System.String,System.DateTime)">
-            <summary>
-            Add item to list
-            </summary>
-            <param name="title">title of item</param>
-            <param name="deadline">deadline of item</param>
         </member>
         <member name="M:Codecool.EinsenhowerMatrix.TodoQuarter.AddItem(System.String,System.DateTime,System.Boolean)">
             <summary>
